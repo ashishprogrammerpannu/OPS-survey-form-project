@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="media/om.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey for OPS school</title>
+    <meta name="description" content="This is a Student made survey form of our OPS School. It is was my project.">
+    <meta name="keywords" content="OPS gohana school,OPS gohana,OPS school,OM Public School Gohana">
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">OPS survey Form</h1>
+      <p id="description">We are greatful to you for your convience</p>
+    </header>
+    <form action="POST" name="survey" netlify id="survey-form" data-netlify="true">
+      <fieldset>
+        <legend>Personal Info</legend>
+        <div class="inp-parent">
+          <label for="name" id="name-label">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your name"
+          />
+        </div>
+        <div class="inp-parent">
+          <label for="email" id="email-label">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Your Email"
+          />
+        </div>
+        <div class="inp-parent radio">
+          <p class="p">Who are you?</p>
+          <div>
+            <input
+              type="radio"
+              name="role"
+              value="Student"
+              id="role1"
+              checked
+            />
+            <label for="role1">Student</label>
+          </div>
+          <div>
+            <input type="radio" name="role" value="Parent" id="role2" />
+            <label for="role2">Parent</label>
+          </div>
+        </div>
+        <div class="inp-parent class-inp">
+          <div>
+            <label for="class" id="number-label">Class</label
+            ><span>(optional)</span>
+          </div>
+          <input
+            type="number"
+            id="class"
+            min="4"
+            max="12"
+            placeholder="Your Class"
+          />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Suggestions</legend>
+        <div class="inp-parent dropdown">
+          <p class="p">Best thing you like of school!</p>
+          <select name="bestie" id="dropdown">
+            <option value="Discipline">Discipline</option>
+            <option value="Culture">Culture</option>
+            <option value="Sports">Sports</option>
+            <option value="Acadmics">Acadmics</option>
+          </select>
+        </div>
+        <div class="inp-parent checkboxes">
+          <p class="p">What things do you want to see improved?</p>
+          <div>
+            <input type="checkbox" name="improve" id="imp1" value="acadmics" />
+            <label for="imp1">Acadmics</label>
+          </div>
+          <div>
+            <input type="checkbox" name="improve" id="imp2" value="sports" />
+            <label for="imp2">Sports</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="improve"
+              id="imp3"
+              value="Discipline"
+            />
+            <label for="imp3">Discipline</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="improve"
+              id="imp4"
+              value="Extra curricular"
+            />
+            <label for="imp4">Extra curricular</label>
+          </div>
+          <div>
+            <input type="checkbox" name="improve" id="imp5" value="nothing" />
+            <label for="imp5">Nothing</label>
+          </div>
+        </div>
+        <div class="inp-parent suggestions">
+          <textarea
+            name="suggestions"
+            id="comments"
+            placeholder="Any suggestions or comments"
+          ></textarea>
+        </div>
+      </fieldset>
+      <div data-netlify-recaptcha="true"></div>
+      <div class="btn">
+        <input type="submit" value="Submit" id="submitbtn" />
+      </div>
+    </form>
+  </body>
+</html>
